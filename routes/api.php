@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\GameResourceController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -18,7 +19,12 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-// POST /games
-Route::post('/games', function (Request $request) {
-    return
+Route::controller(GameResourceController::class)->group(function () {
+    Route::prefix('games')->group(function () {
+        Route::post('/', 'create');
+        Route::get('/{id}', 'getGame');
+        Route::delete('/{id}', 'delete');
+        Route::post('/{id}/restart', 'restart');
+        Route::post('/{id}/{piece}', 'setPiece');
+    });
 });

@@ -1,0 +1,137 @@
+{
+	"info": {
+		"_postman_id": "1fdcf6ca-4fae-4ea0-9e11-705aabb5fd87",
+		"name": "New Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create game resource",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/games",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"games"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get game",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/api/games/234844db-1f0d-4e9e-8538-0b192744b9471",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"api",
+						"games",
+						"234844db-1f0d-4e9e-8538-0b192744b9471"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Set a piece",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"x\": 2,\n    \"y\": 2\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost/api/games/dd7a77b5-1389-4f45-8c08-5ed32d1994dd/o",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"api",
+						"games",
+						"dd7a77b5-1389-4f45-8c08-5ed32d1994dd",
+						"o"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Restart",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"x\": 2,\n    \"y\": 1\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost/api/games/234844db-1f0d-4e9e-8538-0b192744b947/xddd",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"api",
+						"games",
+						"234844db-1f0d-4e9e-8538-0b192744b947",
+						"xddd"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"x\": 2,\n    \"y\": 1\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost/api/games/234844db-1f0d-4e9e-8538-0b192744b947/xddd",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"api",
+						"games",
+						"234844db-1f0d-4e9e-8538-0b192744b947",
+						"xddd"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
